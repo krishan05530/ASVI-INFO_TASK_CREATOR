@@ -37,16 +37,30 @@ app.use(express.urlencoded({extended:true}))
 // }));
 
 
+// app.use(cors({
+//     origin: [
+//         'http://localhost:5173', 
+//         'https://asvi-info-task-crea-git-e04fda-krishan-kumars-projects-91e715cc.vercel.app',
+//         'https://asvi-info-task-creator.vercel.app' // your main domain
+//     ],
+//     credentials: true,
+//     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+//     allowedHeaders: ['Content-Type', 'Authorization']
+// }));
+
+
 app.use(cors({
     origin: [
-        'http://localhost:5173', 
-        'https://asvi-info-task-crea-git-e04fda-krishan-kumars-projects-91e715cc.vercel.app',
-        'https://asvi-info-task-creator.vercel.app' // your main domain
+        'http://localhost:5173', // for local dev
+        'https://asvi-info-task-creator-e6x3.vercel.app' // main Vercel domain
     ],
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
+
+
+
 
 app.use("/tasks",taskRoutes);
 const port= process.env.PORT ||4000;

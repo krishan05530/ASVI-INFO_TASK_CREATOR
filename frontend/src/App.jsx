@@ -57,7 +57,7 @@ function App() {
   }, []);
 
   return (
-    <div className='w-[95%] sm:w-4/5 mx-auto  py-4 border-2 border-gray-400'>
+    <div className='w-11/12 sm:w-4/5 mx-auto  py-4 border-2 border-gray-400'>
       <div className=' px-2 sm:px-4 mt-4  '> 
   <h1 className='text-xl sm:text-3xl font-bold mb-4 text-left'>Add New Tasks</h1>
       <TaskForm
